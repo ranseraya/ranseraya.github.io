@@ -109,3 +109,14 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('fixed');
   }
 });
+
+
+// navbar menu
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('show'); 
+  navbar.classList.toggle('expanded'); 
+});
+
