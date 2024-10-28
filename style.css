@@ -39,6 +39,14 @@ nav {
     z-index: 9999;
     transition: 0.5s ease;
 }
+    /* nav.fixed .nav-container{display: flex; justify-content:space-around; align-items: center;} */
+
+nav.fixed .profil-name{
+    width: 30%;
+    font-size: 33px;
+    padding-top: 0;
+    padding-left: 40px;
+}
 nav.fixed{
     position: fixed; 
     height: 70px;
@@ -75,7 +83,9 @@ nav.fixed{
 
 }
 
-
+#menu{
+    display: none;
+}
 /* Home */
 
 .home-section{
@@ -319,7 +329,9 @@ nav.fixed{
     display: flex;
     flex-direction: column;
 }
-.about-detail .about-experience ul h3, .about-detail .about-experience ul p{
+
+.about-detail .about-experience ul h3{color:white;margin-top: 10px;}
+.about-detail .about-experience ul li h3, .about-detail .about-experience ul p{
     padding: 10px 0;
     font-weight: 600;
     color: var(--Bg2);
@@ -398,7 +410,7 @@ nav.fixed{
 
 .projects-section{
     padding: 5% 80px 0;
-    height: 100vh;
+    height: 107vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -407,26 +419,33 @@ nav.fixed{
 }
 
 .projects-section h2{
-    height: 7%;
-    font-size: 2.5rem;
+    height: 7vh;
+    font-size: 2.4rem;
     font-weight: 600;
     font-family: 'Roboto', sans-serif;
 }
 
 .project-buttons {
-    height: 7%;
-    width: 25%;
+    height: 60px;
+    width: 400px;
     display: flex;
+    /* background-color: #00abf0; */
     justify-content: space-between;
-    margin: 10px 0;
+    align-items: center;
+    /* margin: 10px 0; */
 }
 
+.project-btn:nth-child(3) {width: 102px;}
 .project-btn {
-    background: none;
+    height: 100%;
+    width: 80px;
+    text-align: center;
+    background: var(--Primary);
     border: 1px solid white;
     border-radius: 30px;
     cursor: pointer;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
+    margin: 0;
     font-size: 16px;
     letter-spacing: 2px;
 }
@@ -434,17 +453,20 @@ nav.fixed{
 .project-btn.active {
     border: 1px solid var(--Primary);
     background-color: rgba(31, 81, 255, 0.1);
+    height: 100%;
 }
 
 .project-detail{
     width: 100%;
-    height: 790px;
+    height: 600px;
+    /* background-color: #00b7ff; */
 }
 .project-grid {
-    height: 550px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items:center;
 }
 
 .project-item{
@@ -603,9 +625,6 @@ nav.fixed{
 .contact-chat{
     height: 60vh;
     flex: 1.2;
-}
-
-.contact-chat{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -676,105 +695,238 @@ nav.fixed{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.nav-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+/* Responsive untuk desktop*/
+@media (max-width: 1583px) {
+    html {
+        font-size: 90%;
+      }
+      .home-section #greeting {
+        font-size: 4rem;
+      }
+    .projects-section{
+        height: 140vh;
+    }
+    .project-detail{
+        height: 850px;
+    }
+    .about-section{height: 110vh;}
+    .about-detail .about-education .education{
+        height: 90px;
+        width: 550px;
+    }
+    .about-detail .about-experience ul .experience{
+        height: 160px;
+        width: 580px;
+    }
+}
+
+
+/* Responsive untuk laptop*/
+@media (max-width: 1024px) {
+    html {
+        font-size: 85%;
+    }
+    .home-section #greeting {
+        font-size: 3rem;
+    }
+    .nav-container{display: flex; justify-content:left; align-items: start;}
+    .nav-container .profil-name{
+        width: 400px;
+        font-size: 33px;
+        padding-top: 30px;
+        padding-left: 40px;
+    }
+    .nav-toggle {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .navbar.expanded{
+        height: 40vh;
+    }
+    .nav-menu {
+        position: absolute;
+        top: -500px;
+        width: 100%;
+        height: 30vh;
+        /* background-color: #333; */
+        transition: top 0.4s ease; 
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .nav-menu.show {
+        top: 80px; 
+        width: 100%;
+        height: 30vh;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-list li {
+        margin: 5px 0;
+        width: 100%;
+    }
+    .nav-list li a{
+        font-size: 22px;
+        width: 90%;
+        margin-left: 50px ;
+        height: 50px;
+        display: block;
+        padding-left: 60px;
+        padding-top: 8px;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        /* box-sizing: border-box; */
+    }
+    .nav-list li a:hover{
+        border-top: 2px solid var(--Secondary);
+        border-bottom: 2px solid var(--Secondary);
+    }
+
+    .about-section, .projects-section, .contact-section {
+        padding: 60px;
+    }
+    .project-grid {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+    .about-section{height: 110vh;}
+
+    .about-detail .about-education .education{
+        height: 90px;
+        width: 420px;
+    }
+    .about-detail .about-skills ul li{font-size: 15px;}
+    .about-detail .about-experience ul .experience{
+        height: 160px;
+        width: 420px;
+    }
+
+    .projects-section{
+        height: 150vh;
+    }
+    .project-detail{
+        height: 900px;
+    }
+    .contact-chat .contact-form{width: 400px;}
+    .contact-chat .contact-form form .form-group{width: 400px;}
+
+
+}
+
+/* Responsive untuk Tab*/
+@media (max-width: 768px) {
+    html {
+        font-size: 75%;
+    }
+    .nav-container .profil-name{
+        font-size: 30px;
+    }
+    .nav-menu {
+        width: 220px;
+      }
+    .home-section #greeting {
+        font-size: 2.5rem;
+    }
+    .about-section, .projects-section, .contact-section {
+        padding: 40px;
+    }
+    .projects-section{height: 220vh;}
+    .project-grid {
+        margin-top: 20px;
+        justify-content: center;
+    }
+    .about-section{height: 120vh;}
+    .about-detail .about-education .education{
+        height: 80px;
+        width: 600px;
+    }
+    .about-detail .about-skills ul li{font-size: 14px;}
+    .about-detail .about-experience{flex-direction: column;justify-content: space-evenly;}
+    .about-detail .about-experience ul .experience{
+        height: 120px;
+        width: 600px;
+    }
+    .contact-chat .contact-form{width: 350px;}
+    .contact-chat .contact-form form .form-group{width: 350px;}
+}
 
 
 /* Responsive untuk Mobile*/
-@media (max-width: 768px) {
-    .project-grid {
-        grid-template-columns: 1fr; 
+@media (max-width: 576px) {
+    html{font-size: 70%;}
+    .profil-name span{display: none;}
+    .navbar {
+        font-size: 1rem;
     }
+    .home-section #greeting {
+        font-size: 2rem; 
+    }
+    .navbar {
+        padding: 10px 20px; 
+    }
+    .nav-list li a{width: 70%;}
+
+    .nav-menu {
+        width: 200px; 
+      }
+    .about-section, .projects-section, .contact-section {
+        padding: 20px; 
+    }
+    
+    .projects-section{height: 220vh;}
+    .project-grid {
+        margin-top: 20px;
+        justify-content: center;
+    }
+    .about-section{height: 120vh;}
+    .about-detail .about-education .education{
+        height: 80px;
+        width: 600px;
+    }
+    .about-detail, .about-skills {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .about-detail .about-education .education{
+        height: 80px;
+        width: 500px;
+    }
+    
+    .about-detail .about-skills ul li{font-size: 14px;}
+    .about-detail .about-experience{flex-direction: column;justify-content: space-evenly;}
+    .about-detail .about-experience ul .experience{
+        height: 120px;
+        width: 500px;
+    }
+    .contact-section{
+        flex-direction: column;
+    }
+    .contact-social{order: 2;}
+    .contact-chat{order: 1;}
+    .contact-chat .contact-form{width: 350px;}
+    .contact-chat .contact-form form .form-group{width: 350px;}
 }
 
-/* Responsive untuk tablet*/
-@media (min-width: 769px) and (max-width: 1024px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
+
+
+
+
+
+
 
 .hidden{
     /* display: none !important; */
