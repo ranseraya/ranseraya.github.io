@@ -113,7 +113,7 @@ window.addEventListener('scroll', () => {
 
 // navbar menu
 const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.querySelector('.navbar-menu');
 
 navToggle.addEventListener('click', () => {
   navMenu.classList.toggle('show'); 
