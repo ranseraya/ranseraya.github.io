@@ -12,32 +12,34 @@
     <!-- Navigation -->
     <header>
         <nav class="navbar">
-            <div class="nav-container">
-                <a href="#" class="profil-name">Ayala <span>Rahanda</span></a>
-                <div class="nav-toggle">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo">Ayala <span>Rahanda</span></a>
+                <button class="nav-toggle">
                     <i class="bx bx-menu"></i> 
-                  </div>
-                <div class="nav-menu">
-                    <ul class="nav-list">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                </button>
+                <div class="navbar-menu">
+                    <ul class="navbar-list">
+                        <li><a href="#home" class="navbar-link">Home</a></li>
+                        <li><a href="#about" class="navbar-link">About</a></li>
+                        <li><a href="#projects" class="navbar-link">Projects</a></li>
+                        <li><a href="#contact" class="navbar-link">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
+
     <!-- Home Section -->
+     <main>
     <section id="home" class="home-section">
         <div></div>
-        <div class="home-mid">
+        <div class="home-intro">
             <h1 id="greeting">Hi! i'm Ayala</h1>
             <div class="home-img" data-aos="fade-down" data-aos-duration="1500" >
-                <img src="assest/img/1G.png" alt="Home img">
+                <img src="assest/img/1G.png" alt="Profile img">
             </div>
-            <div class="home-more">
+            <div class="home-links">
                 <a href="#" data-aos="fade-right" data-aos-duration="1500">Chat me!</a>
                 <a href="#" data-aos="fade-left" data-aos-duration="1500">My Resume</a>
             </div>
@@ -48,12 +50,12 @@
 
     <!-- About Me Section -->
     <section id="about" class="about-section">
-        <div class="about-header">
+        <header class="about-header">
             <h2>About Me</h2>
             <p>
                 Hi! I'm Ayala, a passionate informatc with a strong interest in web development, cybersecurity, network engineering, devOps, etc. I love combining creativity with technology to solve real-world problems and build impactful digital experiences. With a background in Network Engineering and Informatic , I am continuously learning and expanding my skill set to stay ahead in the ever-evolving tech landscape. Outside of work, I enjoy plaing badminton, listening music, and learn new leaguage.
             </p>
-        </div>
+        </header>
         <div class="about-buttons">
             <button class="about-btn active" data-target="about-education">
                 <p>Education</p>
@@ -210,7 +212,7 @@
                     <img src="assest/img/TypingTest.jpeg" class="project-card">
                         
                     </img>
-                    <div class="overlay" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="overlay">
                         <button class="overlay-btn view-project"><\></button>
                         <button class="overlay-btn view-code">View</button>
                     </div>
@@ -221,7 +223,7 @@
                     <img src="assest/img/PizzaWeb.png" class="project-card">
 
                     </img>
-                    <div class="overlay" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="overlay">
                         <button class="overlay-btn view-project"><\></button>
                         <button class="overlay-btn view-code">View</button>
                     </div>
@@ -431,6 +433,7 @@
         <div class="copyright">&copy;2024 | Ayala Septama Rahanda</div>
         <div class="quote">All right reserved</div>
     </footer>
+     </main>
 
 
     <div class="card"></div>
