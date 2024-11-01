@@ -12,13 +12,9 @@
 
 :root {
     --Primary: #1F51FF;
-    /* --Primary: #1F51FF; */
-    /* --Primary: rgb(255, 0, 255); */
   --Secondary: #00b7ff;
-  /* --Secondary: rgb(141, 0, 177); */
   --Bg: rgb(29, 27, 27);
   --Bg2: #121212;
-  /* --Bg2: #1A4870; */
 }
 
 body {
@@ -41,12 +37,6 @@ nav {
     transition: 0.5s ease;
 }
 
-/* nav.fixed .navbar-logo{
-    width: 30%;
-    font-size: 2.1rem;
-    padding-top: 0;
-    padding-left: 2.5rem;
-} */
 nav.fixed{
     position: fixed; 
     height: 70px;
@@ -66,7 +56,6 @@ nav.fixed{
 }
 
 .navbar-logo{
-    /* width: 30%; */
     font-family: sans-serif;
     letter-spacing: -0.06rem;
     font-size: 2.25rem;
@@ -81,8 +70,8 @@ nav.fixed{
 #menu{
     display: none;
 }
-/* Home */
 
+/* Home */
 .home-section{
     height: 100vh;
     width: 100%;
@@ -93,7 +82,6 @@ nav.fixed{
 }
 .home-section .home-intro{
     margin-top: 5%;
-    /* height: 90vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,7 +104,6 @@ nav.fixed{
     align-items: center;
     height: 25rem;
     width: 25rem;
-    /* border: 2px solid var(--Primary); */
     background-color: var(--Bg);
     border-radius: 50%;
     overflow: hidden;
@@ -163,13 +150,12 @@ nav.fixed{
 .home-links a:hover::before{
     width: 100%;
 }
-/* About me */
 
+/* About me */
 .about-section{
     padding: 5rem 5rem 0;
-    height: 120vh;
-    /* width: 100%; */
-    /* background-color: var(--Primary); */
+    min-height: 110vh;
+    max-height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -236,7 +222,7 @@ nav.fixed{
 
 .about-detail{
     position: relative;
-    height: auto;
+    height: 100%;
     width: 100%;
     display: flex;
 }
@@ -247,8 +233,6 @@ nav.fixed{
     height: auto; /*450px*/
     width: 100%; /*45vw*/
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
     gap: 1rem;
     opacity: 1;
     transform: scale(1);
@@ -288,8 +272,7 @@ nav.fixed{
     height: auto; /*450px*/
     width: 100%; /*45vw*/
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
+    flex-wrap: wrap;
     gap: 1rem;
     opacity: 1;
     transform: scale(1);
@@ -313,8 +296,6 @@ nav.fixed{
     height: auto; /*450px*/
     width: 100%; /*45vw*/
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
     gap: 1rem;
     opacity: 1;
     transform: scale(1);
@@ -354,7 +335,6 @@ nav.fixed{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #00abf0; */
     opacity: 1;
     transform: scale(1);
     visibility: visible;
@@ -404,8 +384,8 @@ nav.fixed{
     filter: blur(1.5rem);
     opacity: 0.5;
 }
-/* Projects */
 
+/* Projects */
 .projects-section{
     padding: 5% 5rem 0;
     height: auto;
@@ -427,10 +407,8 @@ nav.fixed{
     height: 3.75rem;
     width: 25rem;
     display: flex;
-    /* background-color: #00abf0; */
     justify-content: space-between;
     align-items: center;
-    /* margin: 10px 0; */
 }
 
 .project-btn:nth-child(3) {width: 102px;}
@@ -442,7 +420,6 @@ nav.fixed{
     border: 1px solid white;
     border-radius: 30px;
     cursor: pointer;
-    /* padding: 10px 20px; */
     margin: 0;
     font-size: 1rem;
     letter-spacing: 0.125rem;
@@ -458,7 +435,6 @@ nav.fixed{
     width: 100%;
     height: auto;
     margin-top: 2%;
-    /* background-color: #00b7ff; */
 }
 .project-grid {
     height: 100%;
@@ -564,10 +540,8 @@ nav.fixed{
 .contact-section {
     padding: 9% 5rem 0;
     height: auto; /*80vh*/
-    /* width: 100%; */
     display: flex;
     align-items: center;
-    /* gap: 1.25rem; */
     justify-content: space-between;
     border-bottom: 1px solid grey;
 }
@@ -672,9 +646,6 @@ nav.fixed{
     background-color: rgb(9, 9, 109);
 }
 
-
-
-
 /* Footer */
 .footer{
     height: 20vh;
@@ -694,10 +665,6 @@ nav.fixed{
 }
 /* .footer .quote{
 } */
-
-
-
-
 .nav-toggle {
     display: none;
     font-size: 30px;
@@ -721,8 +688,6 @@ nav.fixed{
     .nav-toggle {
         display: block;
         font-size: 2rem;
-        /* height: 4rem; */
-        /* width: 4rem; */
         background: none;
         border: none;
         position: absolute;
@@ -781,11 +746,10 @@ nav.fixed{
       height: 25rem;
       width: 25rem;
     }
-
+    .about-section{height: 140vh;}
     .about-section h2 {
       font-size: 2rem;
     }
-    /* .about-skills{font-size: 1rem;} */
     .project-grid {
         justify-content: center;
         margin: 0 2rem;
@@ -795,17 +759,13 @@ nav.fixed{
 
 
   @media (max-width: 769px) {
-
+    html{font-size: 14px;}
+    .about-section{height: 140vh;}
   }
-
-
-
-
-
-
-
-
-
+  @media (max-width: 769px) {
+    html{font-size: 12px;}
+    .about-section{height: 150vh;}
+  }
 
 .hidden{
     /* display: none !important; */
